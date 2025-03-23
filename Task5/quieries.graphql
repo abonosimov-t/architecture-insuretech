@@ -1,0 +1,47 @@
+query GetClient($id: String!) {
+  client(id: $id) {
+    id
+    name
+    age
+  }
+}
+
+query GetClientDocuments($id: String!) {
+  clientDocuments(id: $id) {
+    id
+    type
+    number
+    issueDate
+    expiryDate
+  }
+}
+
+query GetClientRelatives($id: String!) {
+  clientRelatives(id: $id) {
+    id
+    relationType
+    name
+    age
+  }
+}
+
+query GetClientFullInfo($id: String!) {
+  client(id: $id) {
+    id
+    name
+    age
+  }
+  clientDocuments(id: $id) {
+    id
+    type
+    number
+    issueDate
+    expiryDate
+  }
+  clientRelatives(id: $id) {
+    id
+    relationType
+    name
+    age
+  }
+}
